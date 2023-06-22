@@ -78,5 +78,26 @@ const Wrapper = styled.section`
       background-color: rgb(220, 218, 216);
     }
   }
+
+  @media (max-width: 768px) {
+    .container {
+      display: block;
+      margin: 2rem 0;
+    }
+
+    .service-column,
+    .middle-column-service,
+    .service-middle-column {
+      width: 100%;
+    }
+
+    .service-middle-column {
+      justify-content: center;
+      .middle-column-service {
+        justify-content: center;
+        padding: 0.5rem 0;
+      }
+    }
+  }
 `;
 export default Services;

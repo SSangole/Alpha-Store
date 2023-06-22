@@ -78,8 +78,15 @@ const Wrapper = styled.section`
     height: auto;
   }
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .container {
+      margin: 0;
+    }
     .grid {
-      gap: 10rem;
+      gap: 3rem;
+      grid-template-columns: none;
+    }
+    .hero-section-image {
+      width: 100%;
     }
     figure::after {
       content: "";

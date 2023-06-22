@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Trusted = () => {
   return (
     <Wrapper className="brand-section">
-      <div className="container">
+      <div className="trusted-container">
         <h4>Trusted By 1000+ Companies</h4>
         <div className="brand-section-slider">
           {/* trusted brands */}
@@ -52,7 +52,7 @@ const Wrapper = styled.section`
     height: 3rem;
   }
 
-  .container {
+  .trusted-container {
     text-align: center;
   }
 
@@ -60,6 +60,17 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     margin: 2rem 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    // padding: 0;
+    .brand-section-slider {
+      margin-top: 3.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      //   text-align: center;
+    }
   }
 `;
 export default Trusted;
