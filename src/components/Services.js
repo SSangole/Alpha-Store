@@ -95,6 +95,7 @@ const Wrapper = styled.section`
       justify-content: center;
       .middle-column-service {
         justify-content: center;
+        gap: 1rem;
         padding: 0.5rem 0;
       }
     }

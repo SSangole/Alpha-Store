@@ -79,7 +79,7 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: rgb(220, 218, 216);
     transform: translateY(-50%);
     width: 70%;
     margin: 0 15%;
