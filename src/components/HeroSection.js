@@ -1,12 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { NavLink } from "react-router-dom";
-// import { useProductContext } from "../context/productcontext";
 
 const HeroSection = ({ headingName }) => {
-  // const data = useProductContext();
-
   return (
     <Wrapper>
       <div className="container">
@@ -97,7 +93,6 @@ const Wrapper = styled.section`
       height: 100%;
       left: 0;
       top: 10%;
-      /* bottom: 10%; */
       background-color: rgba(81, 56, 238, 0.4);
     }
   }

@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Trusted = () => {
@@ -47,6 +46,7 @@ const Trusted = () => {
 const Wrapper = styled.section`
   background-color: aliceblue;
   padding: 2rem;
+  margin-bottom: 4rem;
   img {
     width: auto;
     height: 3rem;
@@ -63,14 +63,16 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    // padding: 0;
     .brand-section-slider {
       margin-top: 3.2rem;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1rem;
-      //   text-align: center;
     }
+  }
+
+  @media (max-width: 491px) {
+    margin-bottom: 6rem;
   }
 `;
 export default Trusted;

@@ -131,7 +131,22 @@ const Wrapper = styled.section`
     text-decoration: none;
   }
 
-  hr {
+  @media (max-width: 678px) {
+    .grid-four-columns {
+      display: block;
+
+      p {
+        line-height: 10px;
+      }
+    }
+    hr {
+      width: -webkit-fill-available;
+    }
   }
+
+  @media (max-width: 491px) {
+    .grid-two-columns {
+      display: block;
+    }
 `;
 export default Footer;

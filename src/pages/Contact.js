@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Contact = () => {
@@ -47,7 +46,7 @@ const Contact = () => {
 };
 
 const Wrapper = styled.section`
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-align: center;
 
   input[type="submit"] {
