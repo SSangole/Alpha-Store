@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Alpha-Store/static/css/main.e6c13ad2.css",
+    "main.js": "/Alpha-Store/static/js/main.af6a3c79.js",
+    "index.html": "/Alpha-Store/index.html",
+    "main.e6c13ad2.css.map": "/Alpha-Store/static/css/main.e6c13ad2.css.map",
+    "main.af6a3c79.js.map": "/Alpha-Store/static/js/main.af6a3c79.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.af6a3c79.js"
+  ]
+}
