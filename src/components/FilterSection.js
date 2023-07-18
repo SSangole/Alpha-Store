@@ -36,6 +36,7 @@ const FilterSection = () => {
             type="text"
             name="text"
             value={text}
+            className="search"
             onChange={updateFilterValue}
             placeholder="Search"
           />
@@ -157,7 +158,7 @@ const Wrapper = styled.section`
     }
   }
 
-  input {
+  .search {
     padding: 1rem;
     border-radius: 5px;
   }

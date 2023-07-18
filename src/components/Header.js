@@ -6,7 +6,10 @@ const Header = () => {
   return (
     <MainHeader>
       <NavLink to="/" className="header">
-        <img src="/image/Alphastore.png" alt="Logo" />
+        <img
+          src="https://alphastore.pk/wp-content/uploads/2023/06/ALPHA-STORE-300x89.png"
+          alt="Logo"
+        />
       </NavLink>
       <Nav />
     </MainHeader>

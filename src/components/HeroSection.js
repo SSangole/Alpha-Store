@@ -22,7 +22,11 @@ const HeroSection = ({ headingName }) => {
           {/* Homepage Image */}
           <div className="hero-section-image">
             <figure>
-              <img src="image/hero.jpg" alt="Homepage" className="img-style" />
+              <img
+                src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=900&t=st=1689703107~exp=1689703707~hmac=caa875fcd8d32c3c36b0f228896d92932c0f51ad08b41f9dfb32c356ba8ccff5"
+                alt="Homepage"
+                className="img-style"
+              />
             </figure>
           </div>
         </div>
