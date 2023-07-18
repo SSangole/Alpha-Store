@@ -9,7 +9,6 @@ const ProductReducer = (state, action) => {
       const featureData = action.payload.filter(
         (currElem) => currElem.featured
       );
-      console.log("data", featureData);
       return {
         ...state,
         isLoading: false,

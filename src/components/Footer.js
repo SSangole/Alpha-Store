@@ -114,7 +114,6 @@ const Wrapper = styled.section`
 
   .footer-bottom {
     color: white;
-    // width: -webkit-fill-available;
     text-align: center;
   }
 

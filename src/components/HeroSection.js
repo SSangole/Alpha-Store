@@ -15,7 +15,7 @@ const HeroSection = ({ headingName }) => {
               you can find your future customers, optimize your conversion
               rates, and get people excited about your brand.
             </p>
-            <NavLink>
+            <NavLink to="/products">
               <Button>Shop Now</Button>
             </NavLink>
           </div>
@@ -33,6 +33,7 @@ const HeroSection = ({ headingName }) => {
 
 const Wrapper = styled.section`
   padding: 2rem auto;
+  margin-bottom: 2rem;
   img {
     min-width: 10rem;
     height: 25rem;

@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const SingleProductImages = ({ images = [{ url: "" }] }) => {
-  console.log("images", images);
   const [currImage, setCurrImage] = useState(0);
   return (
     <Wrapper>
@@ -10,12 +9,12 @@ const SingleProductImages = ({ images = [{ url: "" }] }) => {
         <div className="grid grid-four-rows">
           {images.map((currElem, index) => {
             return (
-              <figure>
+              <figure key={index}>
                 <img
                   src={currElem.url}
                   alt={currElem.filename}
                   className="box-image--style"
-                  key={currElem.id}
+                  key={index}
                   onClick={() => setCurrImage(index)}
                 />
               </figure>

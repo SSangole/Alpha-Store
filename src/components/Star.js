@@ -3,8 +3,6 @@ import { AiOutlineStar } from "react-icons/ai";
 import styled from "styled-components";
 
 const Star = ({ stars, reviews }) => {
-  console.log(stars, reviews);
-
   const ratingStars = Array.from({ length: 5 }, (elem, index) => {
     const number = index + 0.5;
     return (

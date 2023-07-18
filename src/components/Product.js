@@ -4,7 +4,6 @@ import FormatPrice from "../Helpers/FormatPrice";
 
 const Product = (currElem) => {
   const { id, name, image, price, category } = currElem;
-  console.log("feature recieved", id, name, image, price, category);
   return (
     <Wrapper>
       <NavLink to={`/singleproduct/${id}`}>

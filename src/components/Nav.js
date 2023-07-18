@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { useCartContext } from "../context/cartcontext";
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState();
+  const { total_item } = useCartContext();
 
   return (
     <NavWrapper>
@@ -54,7 +56,7 @@ const Nav = () => {
               onClick={() => setMenuIcon(false)}
             >
               <FiShoppingCart className="cart-trolley" />
-              <span className="cart-total--item"> 10 </span>
+              <span className="cart-total--item"> {total_item} </span>
             </NavLink>
           </span>
         </div>
@@ -76,16 +78,20 @@ const Nav = () => {
 };
 
 const NavWrapper = styled.section`
+  .navbar-link {
+    color: antiquewhite;
+  }
+
   @media (max-width: 480px) {
     .navbar {
       display: block;
       width: 100%;
-
       .mobile-navbar-btn {
         font-size: 2rem;
         display: block;
         cursor: pointer;
         position: absolute;
+        background-color: rgb(98 84 243);
         right: 10%;
         top: 30%;
         z-index: 9999;
@@ -132,6 +138,7 @@ const NavWrapper = styled.section`
 
       .navbar-link {
         font-size: 1rem;
+        color: black;
       }
     }
   }

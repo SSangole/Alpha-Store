@@ -11,14 +11,12 @@ const FeatureProduct = () => {
 
   return (
     <Wrapper className="section">
-      <div>
-        <div className="intro-data">Check Now!</div>
-        <div className="common-heading">Our Feature Services</div>
-        <div className="grid grid-three-columns">
-          {featureProducts.map((curElem) => {
-            return <Product key={curElem.id} {...curElem} />;
-          })}
-        </div>
+      <div className="intro-data">Check Now!</div>
+      <div className="intro-data">Our Feature Services</div>
+      <div className="grid grid-three-columns">
+        {featureProducts.map((curElem) => {
+          return <Product key={curElem.id} {...curElem} />;
+        })}
       </div>
     </Wrapper>
   );
@@ -27,6 +25,11 @@ const FeatureProduct = () => {
 const Wrapper = styled.section`
   padding: 2rem 0;
   background-color: ${({ theme }) => theme.colors.bg};
+
+  .intro-data {
+    padding-left: 4rem;
+    font-size: 1.7rem;
+  }
 
   .card {
     background-color: #fff;

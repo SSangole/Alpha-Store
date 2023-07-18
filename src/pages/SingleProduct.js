@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { useProductContext } from "../context/productcontext";
 import PageNavigation from "../components/PageNavigation";
 import styled from "styled-components";
@@ -9,14 +9,11 @@ import { TbReplace, TbTruckDelivery } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md";
 import Star from "../components/Star";
 import AddToCart from "../components/AddToCart";
-import CartAmountToggle from "../components/CartAmountToggle";
-import { Button } from "../styles/Button";
 
 const API = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
-  const { getSingleProduct, isSingleLoading, singleProduct } =
-    useProductContext();
+  const { getSingleProduct, singleProduct } = useProductContext();
 
   const {
     id: alias,
@@ -24,23 +21,12 @@ const SingleProduct = () => {
     company,
     price,
     description,
-    category,
     stock,
     stars,
     reviews,
     image,
   } = singleProduct;
   const { id } = useParams();
-
-  const [amount, setAmount] = useState(1);
-
-  const setIncrease = () => {
-    amount < stock ? setAmount(amount + 1) : setAmount(stock);
-  };
-
-  const setDecrease = () => {
-    amount > 1 ? setAmount(amount - 1) : setAmount(1);
-  };
 
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
@@ -100,20 +86,6 @@ const SingleProduct = () => {
             </div>
 
             <div>{stock > 0 && <AddToCart product={singleProduct} />}</div>
-
-            {/* {cart amount to add} */}
-
-            <div className="cart-amount-toggle">
-              <CartAmountToggle
-                amount={amount}
-                setIncrease={setIncrease}
-                setDecrease={setDecrease}
-              />
-            </div>
-
-            <NavLink to="/cart">
-              <Button>Add to cart</Button>
-            </NavLink>
           </div>
         </div>
       </div>
