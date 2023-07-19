@@ -41,7 +41,7 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === "CART_TOTAL_PRICE_ITEM") {
-    if (state.cart === null && state.cart === undefined) {
+    if (state.cart === null || state.cart === undefined) {
       return {
         ...state,
       };
