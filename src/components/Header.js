@@ -5,7 +5,7 @@ import Nav from "./Nav";
 const Header = () => {
   return (
     <MainHeader>
-      <NavLink to="/" className="header">
+      <NavLink to="/Alpha-Store" className="header">
         <img
           src="https://alphastore.pk/wp-content/uploads/2023/06/ALPHA-STORE-300x89.png"
           alt="Logo"

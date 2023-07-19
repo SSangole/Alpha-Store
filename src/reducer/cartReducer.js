@@ -41,6 +41,11 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === "CART_TOTAL_PRICE_ITEM") {
+    if (state.cart === null && state.cart === undefined) {
+      return {
+        ...state,
+      };
+    }
     let { total_price, total_items } = state.cart.reduce(
       (acc, currElem) => {
         acc.total_price += currElem.amount * currElem.price;

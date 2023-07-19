@@ -15,7 +15,7 @@ const Nav = () => {
         <div className="navbar-lists">
           <span>
             <NavLink
-              to="/"
+              to="/Alpha-Store"
               className="navbar-link"
               onClick={() => setMenuIcon(false)}
             >
